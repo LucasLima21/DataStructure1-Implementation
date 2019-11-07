@@ -71,7 +71,7 @@ Node<Type> * LinkedList<Type>::search(Type x){
 
 template<typename Type>
 void LinkedList<Type>::remove(Node<Type> * r){
-  if(empty() || r == NULL || r == first)  cout << "Impossível Remover" << endl;
+  if(empty() || r == NULL || r == first)  cout << "Can not remove item" << endl;
   else{
     Node<Type> * p = previous(r);
     p->next = r->next;
