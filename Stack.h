@@ -2,7 +2,6 @@
 #define Stack_h
 #include <iostream>
 using namespace std;
-
 template<typename Type>
 class Stack{
 private:
@@ -57,4 +56,5 @@ void Stack<Type>::showStack(){
   }
   cout << "[ " << item[bottom+1] << " ]" << " <- bottom" << endl;
 }
+
 #endif

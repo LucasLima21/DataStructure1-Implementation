@@ -34,7 +34,7 @@ public:
 template <typename Type>
 LinkedList<Type>::LinkedList() {
     first = new Node<Type>();
-    first->next = NULL;
+    first->setNext(NULL);
     last = first;
 
 }
@@ -42,17 +42,17 @@ LinkedList<Type>::LinkedList() {
 
 template <typename Type>
 void LinkedList<Type>::insert(Type x){
-  last->next = new Node<Type>();
-  last = last->next;
-  last->next = NULL;
-  last->item = x;
+  last->setNext(new Node<Type>());
+  last = last->getNext();
+  last->setNext(NULL);
+  last->setItem(x);
 
 }
 
 template<typename Type>
 Node<Type> * LinkedList<Type>::previous(Node<Type> * r){
     Node<Type>* p = first;
-    while (p->next != r) p = p->next;
+    while (p->getNext() != r) p = p->getNext();
     return p;
 }
 
@@ -63,8 +63,8 @@ bool LinkedList<Type>::empty(){
 
 template<typename Type>
 Node<Type> * LinkedList<Type>::search(Type x){
-  Node<Type> * p = first->next;
-  while(p != NULL && p->item != x) p = p->next;
+  Node<Type> * p = first->getNext();
+  while(p != NULL && p->getItem() != x) p = p->getNext();
 
   return p;
 }
@@ -74,8 +74,8 @@ void LinkedList<Type>::remove(Node<Type> * r){
   if(empty() || r == NULL || r == first)  cout << "Can not remove item" << endl;
   else{
     Node<Type> * p = previous(r);
-    p->next = r->next;
-    if(p->next == NULL) last = p;
+    p->setNext(r->getNext());
+    if(p->getNext() == NULL) last = p;
     delete r;
 
   }
@@ -83,11 +83,11 @@ void LinkedList<Type>::remove(Node<Type> * r){
 
 template<typename Type>
 void LinkedList<Type>::print(){
-  Node<Type> * p = first->next;
+  Node<Type> * p = first->getNext();
   cout << "[ ";
   while(p!=NULL){
-    cout << p->item << " ";
-    p = p->next;
+    cout << p->getItem() << " ";
+    p = p->getNext();
   }
   cout << "]" << endl;
 }

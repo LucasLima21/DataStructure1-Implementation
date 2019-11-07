@@ -73,4 +73,5 @@ void Queue<Type>::showQueue(){
   for(int i = front; i < back; i++) cout << item[i] << " ";
   cout << "]" << endl; 
 }
+
 #endif

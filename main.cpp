@@ -7,6 +7,8 @@
 #include "DynamicQueue.h"
 #include "BinarySearchTree.h"
 #include "AVLTree.h"
+#include "HashTable.h"
+
 using namespace std;
 int main (){
     List<int> list1(4);
@@ -87,7 +89,8 @@ int main (){
     treeOfNumbers.preOrderTreeWalk();
     treeOfNumbers.inOrderTreeWalk();
     treeOfNumbers.postOrderTreeWalk();
-
+    
+    
     //////////////////////////////////////////////////////////////////
     AVLTree<int> avl;
     avl.insert(56);
@@ -100,7 +103,33 @@ int main (){
     cout << "\nAVL Tree = \n";
     cout << avl.getRoot()->getRight()->getBalanceFactor() << endl;
     avl.preOrderTreeWalk();
+    cout << endl;
     
-    
+    ////////////////////////////////////////////////////////////////
+
+    HashTable<string> table(10);
+    // in this table, type o table it's has to be string
+    table.insertTable("aaaaa");
+    table.insertTable("abbbba");
+    table.insertTable("acccaa");
+    table.insertTable("addddaa");
+    table.insertTable("adeddeeeeaa");
+    table.insertTable("aaffffaa");
+    table.insertTable("ggggg");
+    table.insertTable("hhhhh");
+    table.insertTable("iiii");
+    table.insertTable("jjjj");
+    table.insertTable("kkkka");
+    table.insertTable("llllla");
+    table.insertTable("ammmmaa");
+    table.insertTable("annnnna");
+    cout << "HashTable = \n";
+    table.showTable();
+    cout << endl;
+    table.searchTable("aaaaa");
+    cout << endl;
+    table.removeTable("aaaaa");
+    cout << "After remove item" << endl;
+    table.showTable();
     return 0;
 }

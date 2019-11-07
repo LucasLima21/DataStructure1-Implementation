@@ -6,21 +6,20 @@ private:
   Type item;
   Node<Type> * next, * left , * right;
   int balanceFactor, counter;
-
 public:
   Node();
   Node(Type);
-  Node<Type> * getNext(){
-    return next;
-  }
-  void setNext(Node<Type> * next){
-    this->next = next;
-  }
   Type getItem(){
     return item;
   }
   void setItem(Type item){
     this->item = item;
+  }
+  Node<Type> * getNext(){
+    return next;
+  }
+  void setNext(Node<Type> * next){
+    this->next = next;
   }
   Node<Type> *& getLeft(){
     return left;

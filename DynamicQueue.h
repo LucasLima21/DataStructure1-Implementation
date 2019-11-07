@@ -14,7 +14,7 @@ public:
     return front;
   }
   void setFront(Node<Type> * front){
-    this->frete = front;
+    this->front = front;
   }
   Node<Type> * getBack(){
     return back;
@@ -35,16 +35,16 @@ bool DynamicQueue<Type>::emptyQueue(){
 template<typename Type>
 DynamicQueue<Type>::DynamicQueue(){
   front = new Node<Type>();
-  front->next = NULL;
+  front->setNext(NULL);
   back = front;
 }
 
 template<typename Type>
 void DynamicQueue <Type>::enqueue(Type x){
-  back->next = new Node<Type>();
-  back = back->next;
-  back->item = x;
-  back->next = NULL;
+  back->setNext(new Node<Type>());
+  back = back->getNext();
+  back->setItem(x);
+  back->setNext(NULL);
 }
 
 template<typename Type>
@@ -52,19 +52,19 @@ void DynamicQueue <Type>::dequeue(){
   Node<Type> * aux  = front;
   Type x;
   if(front!=back){
-    front = front->next;
-    x = front->item;
+    front = front->getNext();
+    x = front->getItem();
     delete aux;
   }else cout << "Empty Queue" << endl;
 }
 
 template<typename Type>
 void DynamicQueue <Type>::showQueue(){
-  Node<Type> * i  =  front->next;
+  Node<Type> * i  =  front->getNext();
   cout << "[ ";
   while(i!=NULL){
-    cout << i->item << " ";
-    i = i->next;
+    cout << i->getItem() << " ";
+    i = i->getNext();
   }
   cout << "]" << endl;
 }

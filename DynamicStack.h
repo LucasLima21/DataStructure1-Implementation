@@ -32,15 +32,15 @@ public:
 template<typename Type>
 DynamicStack<Type>::DynamicStack(){
   bottom = new Node<Type>();
-  bottom->next = NULL;
+  bottom->setNext(NULL);
   top = bottom;
 }
 
 template<typename Type>
 void DynamicStack<Type>::stackUp(Type x){
   Node<Type> * aux = new Node<Type>();
-  top->item = x;
-  aux->next = top;
+  top->setItem(x);
+  aux->setNext(top);
   top = aux;
 }
 
@@ -50,8 +50,8 @@ void DynamicStack<Type>::unstack(){
     Type x;
     Node<Type> * aux = new Node<Type>();
     aux = top;
-    top = top->next;
-    x = top->item;
+    top = top->getNext();
+    x = top->getItem();
     delete aux;
   }
   else  cout << "Empty Stack" << endl;
@@ -59,11 +59,12 @@ void DynamicStack<Type>::unstack(){
 
 template<typename Type>
 void DynamicStack<Type>::showStack(){
-  Node<Type> * i = top->next;
+  Node<Type> * i = top->getNext();
   
   while(i!= NULL){
-    cout << "[ " << i->item  << " ]" << endl;
-    i = i->next;
+    cout << "[ " << i->getItem()  << " ]" << endl;
+    i = i->getNext();
   }
 }
+
 #endif

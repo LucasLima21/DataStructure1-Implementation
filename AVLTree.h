@@ -1,7 +1,7 @@
 #ifndef AVLTree_h
 #define AVLTree_h
-#include "Node.h"
 #include <iostream>
+#include "Node.h"
 using namespace std;
 template<typename Type>
 class AVLTree{
@@ -285,4 +285,5 @@ void AVLTree<Type>::doubleRightLeftRotation(Node<Type> *& pointer, Node<Type> *&
   }
   pointer = pointer2;
 }
+
 #endif
