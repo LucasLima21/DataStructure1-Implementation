@@ -197,7 +197,7 @@ template<typename Type>
 void AVLTree<Type>::remove(Type & item, Node<Type> *& pointer){
   Node<Type> * aux = pointer;
   if(pointer == NULL){
-    cout << "Error: item aren't in tree !" << endl;
+    cout << "Error: item isn't in tree !" << endl;
   }
   else if(item < pointer->getItem()){
     remove(item, pointer->getLeft());
