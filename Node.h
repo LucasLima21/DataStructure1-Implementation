@@ -2,10 +2,12 @@
 #define Node_h
 template <typename Type>
 class Node{
-public:
+private:
   Type item;
   Node<Type> * next, * left , * right;
   int balanceFactor, counter;
+
+public:
   Node();
   Node(Type);
   Node<Type> * getNext(){
