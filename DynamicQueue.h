@@ -50,10 +50,8 @@ void DynamicQueue <Type>::enqueue(Type x){
 template<typename Type>
 void DynamicQueue <Type>::dequeue(){
   Node<Type> * aux  = front;
-  Type x;
-  if(front!=back){
+  if(!emptyQueue()){
     front = front->getNext();
-    x = front->getItem();
     delete aux;
   }else cout << "Empty Queue" << endl;
 }

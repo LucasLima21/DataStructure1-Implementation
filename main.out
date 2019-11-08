@@ -1,0 +1,97 @@
+Static List = [ 3 -3 -3 3 ]
+
+Linked List = [ 1 2 33 666 ]
+------------
+
+Linked List = [ 33 666 ]
+
+Static Stack = 
+[ 55.3 ] <- top
+[ 33.2 ]
+[ 12.5 ] <- bottom
+
+Dynamic Stack = 
+[ IRINEU ]
+[ JOOOOOOOOOOOOOJ ]
+
+StaticQueue = [ 333.321 666.213 ]
+
+Dynamic Queue = [ n e w b ]
+
+Bynary Search Tree = 
+Item found: 45
+Pre Order Tree Walk = [ 15 9 -1 0 35 45 ]
+In Order Tree Walk = [ -1 0 9 15 35 45 ]
+Post Order Tree Walk = [ 0 -1 9 45 35 15 ]
+
+AVL Tree = 
+1
+Pre Order Tree Walk = [ 56 24 16 50 62 103 84 ]
+
+HashTable = 
+TABLE
+word 0
+In Order Tree Walk = [ hhhhh iiii ]
+
+word 1
+In Order Tree Walk = [ addddaa ]
+
+word 2
+In Order Tree Walk = [ ]
+
+word 3
+In Order Tree Walk = [ ]
+
+word 4
+In Order Tree Walk = [ annnnna jjjj ]
+
+word 5
+In Order Tree Walk = [ aaaaa ggggg kkkka ]
+
+word 6
+In Order Tree Walk = [ aaffffaa abbbba adeddeeeeaa ]
+
+word 7
+In Order Tree Walk = [ ammmmaa llllla ]
+
+word 8
+In Order Tree Walk = [ acccaa ]
+
+word 9
+In Order Tree Walk = [ ]
+
+
+Item found: aaaaa
+
+After remove item
+TABLE
+word 0
+In Order Tree Walk = [ hhhhh iiii ]
+
+word 1
+In Order Tree Walk = [ addddaa ]
+
+word 2
+In Order Tree Walk = [ ]
+
+word 3
+In Order Tree Walk = [ ]
+
+word 4
+In Order Tree Walk = [ annnnna jjjj ]
+
+word 5
+In Order Tree Walk = [ ggggg kkkka ]
+
+word 6
+In Order Tree Walk = [ aaffffaa abbbba adeddeeeeaa ]
+
+word 7
+In Order Tree Walk = [ ammmmaa llllla ]
+
+word 8
+In Order Tree Walk = [ acccaa ]
+
+word 9
+In Order Tree Walk = [ ]
+

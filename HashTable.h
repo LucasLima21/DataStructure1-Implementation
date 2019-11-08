@@ -86,7 +86,7 @@ void HashTable<Type>::removeTable(Type word){
 template<typename Type>
 void HashTable<Type>::showTable(){
     cout << "TABLE" << endl;
-    for (int i = 0; i < EXTENT; i ++){
+    for (unsigned long int i = 0; i < EXTENT; i ++){
       cout << "word " << i << endl;
       collisionTree[i].inOrderTreeWalk();
       cout << endl;

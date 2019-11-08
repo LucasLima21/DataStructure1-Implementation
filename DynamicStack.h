@@ -26,9 +26,13 @@ public:
   void stackUp(Type);
   void unstack();
   void showStack();
+  bool emptyStack();
 
 };
-
+template<typename Type>
+bool DynamicStack<Type>::emptyStack(){
+  return ((top == bottom)? 1 : 0);
+}
 template<typename Type>
 DynamicStack<Type>::DynamicStack(){
   bottom = new Node<Type>();
@@ -46,12 +50,10 @@ void DynamicStack<Type>::stackUp(Type x){
 
 template<typename Type>
 void DynamicStack<Type>::unstack(){
-  if(top != bottom){
-    Type x;
+  if(!emptyStack()){
     Node<Type> * aux = new Node<Type>();
     aux = top;
     top = top->getNext();
-    x = top->getItem();
     delete aux;
   }
   else  cout << "Empty Stack" << endl;
