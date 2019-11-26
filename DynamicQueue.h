@@ -11,7 +11,7 @@ public:
   DynamicQueue();
 
   Node<Type> * getFront(){
-    return front;
+    return front->getNext();
   }
   void setFront(Node<Type> * front){
     this->front = front;
